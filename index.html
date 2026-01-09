@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>二次元爱好者的个人主页</title>
+<style type="text/css">
+/* 兼容IE6的基本样式 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "宋体", Arial, sans-serif;
+    font-size: 12px;
+    color: #333;
+    background-color: #f0f0f0;
+    background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    line-height: 1.6;
+}
+
+#container {
+    width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #ccc;
+}
+
+/* 兼容IE6的透明背景 */
+* html body {
+    background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+}
+
+* html #container {
+    background-color: #fff;
+    filter: alpha(opacity=85);
+}
+
+/* 顶部区域 */
+#header {
+    height: 150px;
+    background-color: #ff66aa;
+    border-bottom: 5px solid #cc3399;
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+#logo h1 {
+    font-size: 28px;
+    color: #fff;
+    text-shadow: 2px 2px 0 #cc3399;
+    font-weight: bold;
+}
+
+#logo p {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+/* 导航菜单 - 2010年风格 */
+#nav {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+#nav ul {
+    list-style: none;
+}
+
+#nav ul li {
+    float: left;
+    margin-left: 5px;
+}
+
+#nav ul li a {
+    display: block;
+    padding: 5px 15px;
+    background-color: #ff99cc;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #cc6699;
+}
+
+#nav ul li a:hover {
+    background-color: #ff33aa;
+}
+
+/* 主体内容区域 */
+#content {
+    padding: 20px;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 220px;
+    float: left;
+    background-color: #f8f0ff;
+    border: 1px solid #dcc6f0;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    color: #9933cc;
+    border-bottom: 2px dotted #cc99ff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.sidebar ul li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #e6d6f5;
+}
+
+.sidebar ul li a {
+    color: #6600cc;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #ff33aa;
+    text-decoration: underline;
+}
+
+.main {
+    width: 600px;
+    float: left;
+}
+
+/* 内容框样式 */
+.box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.box h2 {
+    font-size: 18px;
+    color: #ff6699;
+    border-bottom: 2px solid #ffccdd;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.box p {
+    margin-bottom: 10px;
+    text-indent: 2em;
+}
+
+/* 图片展示区域 - 2010年风格 */
+.gallery {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.gallery img {
+    border: 5px solid #fff;
+    outline: 1px solid #ccc;
+    margin: 5px;
+}
+
+/* 页脚 */
+#footer {
+    clear: both;
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 5px solid #ff66aa;
+}
+
+#footer a {
+    color: #ff99cc;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* 兼容IE6的浮动清除 */
+.clear {
+    clear: both;
+}
+
+/* 2010年风格的按钮 */
+.button {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #ff66aa;
+    color: white;
+    border: 1px solid #cc3399;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.button:hover {
+    background-color: #ff3388;
+}
+
+/* 计数器 - 2010年个人主页常见元素 */
+.counter {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 11px;
+    color: #666;
+}
+
+/* 音乐播放器样式 */
+.music-player {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 11px;
+}
+</style>
+<!--[if IE 6]>
+<style type="text/css">
+/* IE6专用样式 */
+#container {
+    width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.sidebar, .main {
+    display: inline;
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 120px;
+    height: 90px;
+}
+</style>
+<![endif]-->
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <div id="logo">
+            <h1>二次元の小世界</h1>
+            <p>欢迎来到我的动漫空间！(?>?<?)</p>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#gallery">动漫收藏</a></li>
+                <li><a href="#links">友情链接</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    
+    <div id="content">
+        <div class="sidebar">
+            <h3>个人资料</h3>
+            <div style="text-align:center; margin-bottom:15px;">
+                <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" width="150" height="150" alt="头像" style="border:3px solid #ff99cc;" />
+                <p><strong>昵称：</strong>动漫小宅</p>
+                <p><strong>爱好：</strong>追番、手办、Cosplay</p>
+            </div>
+            
+            <h3>最近在追</h3>
+            <ul>
+                <li><a href="#">鬼灭之刃 游郭篇</a></li>
+                <li><a href="#">更衣人偶坠入爱河</a></li>
+                <li><a href="#">JOJO的奇妙冒险</a></li>
+                <li><a href="#">间谍过家家</a></li>
+                <li><a href="#">进击的巨人 最终季</a></li>
+            </ul>
+            
+            <h3>友情链接</h3>
+            <ul>
+                <li><a href="#">动漫花园</a></li>
+                <li><a href="#">哔哩哔哩动漫</a></li>
+                <li><a href="#">天使动漫论坛</a></li>
+                <li><a href="#">萌娘百科</a></li>
+            </ul>
+            
+            <div class="music-player">
+                <p>背景音乐：鳥の詩 (AIR OST)</p>
+                <p>音量: ????????</p>
+                <p><a href="#" class="button">播放/暂停</a></p>
+            </div>
+            
+            <div class="counter">
+                <p>您是第 <span style="color:#ff3399; font-weight:bold;">88888</span> 位访客</p>
+                <p>当前在线: 23 人</p>
+            </div>
+        </div>
+        
+        <div class="main">
+            <div class="box">
+                <h2>欢迎来到我的二次元空间！</h2>
+                <p>大家好，我是动漫小宅，一个热爱二次元的普通宅。从小学开始接触《美少女战士》和《数码宝贝》，从此踏上了动漫爱好者的不归路。这个主页是我在2010年建立的，记录了我对动漫的热爱和收藏。</p>
+                <p>我最喜欢的动漫类型是热血、战斗和日常治愈系。最喜欢的作品有《海贼王》、《CLANNAD》、《命运石之门》和《魔法少女小圆》。最近沉迷于《鬼灭之刃》无法自拔，炭治郎实在是太温柔了！</p>
+                <p>除了看动漫，我还喜欢收集手办和周边产品。目前最珍贵的收藏是初代《EVA》的绫波丽手办，还有《凉宫春日的忧郁》的朝比奈实玖瑠等身大抱枕。</p>
+                <p><a href="#more" class="button">查看更多关于我的信息</a></p>
+            </div>
+            
+            <div class="box">
+                <h2>我的动漫收藏展示</h2>
+                <p>以下是我部分动漫收藏的图片，包括手办、漫画书和海报等：</p>
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-1.2.1&auto=format&fit=crop&w=120&q=80" width="120" height="90" alt="动漫收藏1" />
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-1.2.1&auto=format&fit=crop&w=120&q=80" width="120" height="90" alt="动漫收藏2" />
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-1.2.1&auto=format&fit=crop&w=120&q=80" width="120" height="90" alt="动漫收藏3" />
+                    <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=120&q=80" width="120" height="90" alt="动漫收藏4" />
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-1.2.1&auto=format&fit=crop&w=120&q=80" width="120" height="90" alt="动漫收藏5" />
+                    <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=120&q=80" width="120" height="90" alt="动漫收藏6" />
+                </div>
+                <p><a href="#gallery" class="button">查看全部收藏</a></p>
+            </div>
+            
+            <div class="box">
+                <h2>近期动漫推荐</h2>
+                <p><strong>《间谍过家家》</strong> - 2022年4月新番，讲述了一名间谍、一名杀手和一个超能力者组成的临时家庭，互相隐瞒真实身份的家庭喜剧。画风可爱，剧情温馨搞笑，强烈推荐！</p>
+                <p><strong《更衣人偶坠入爱河》</strong> - 关于制作cosplay服装和高中生活的恋爱喜剧。男主角是制作雏人偶头部的专业匠人，女主角是热爱cosplay的校园偶像。对cosplay文化的描写非常真实。</p>
+                <p><strong>《鬼灭之刃 游郭篇》</strong> - 炭治郎一行人来到花街调查失踪事件，与上弦之陆展开激战。Ufotable的制作一如既往的精良，战斗场面堪称电影级别！</p>
+                <p><a href="#recommend" class="button">查看更多推荐</a></p>
+            </div>
+        </div>
+        
+        <div class="clear"></div>
+    </div>
+    
+    <div id="footer">
+        <p>? 2010-2022 二次元の小世界 个人主页 |  Designed by 动漫小宅</p>
+        <p>本站最佳浏览分辨率：1024×768 | 推荐使用IE6.0以上版本浏览器</p>
+        <p>联系我：<a href="mailto:anime_fan@example.com">anime_fan@example.com</a> | QQ: 123456789</p>
+        <p>声明：本站所有图片和资源均来自网络，仅供个人爱好交流使用，如有侵权请联系删除</p>
+    </div>
+</div>
+
+<!-- 2010年常见的网页装饰元素 -->
+<div style="position:absolute; top:100px; left:50px; z-index:-1;">
+    <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" width="100" height="80" alt="装饰" />
+</div>
+
+<div style="position:absolute; top:300px; right:50px; z-index:-1;">
+    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" width="100" height="80" alt="装饰" />
+</div>
+
+<!-- 兼容IE6的脚本 -->
+<!--[if IE 6]>
+<script type="text/javascript">
+// IE6 PNG透明修复（如果需要）
+try {
+    document.execCommand("BackgroundImageCache", false, true);
+} catch(e) {}
+</script>
+<![endif]-->
+
+</body>
+</html>
